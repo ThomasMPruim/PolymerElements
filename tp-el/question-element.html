@@ -1,0 +1,57 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`question-element`
+A question element to be used for making online quizzes
+
+@demo demo/index.html 
+-->
+
+<dom-module id="question-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>[[question]]</h2>
+    <form>
+      <input type="checkbox" value="answer1">[[answer1]]<br>
+      <input type="checkbox" value="answer2">[[answer2]]<br>
+      <input type="checkbox" value="answer3">[[answer3]]<br>
+      <input type="checkbox" value='answer4'>[[answer4]]<br>
+      <input type="submit" name="Check your answer">
+    </form>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'question-element',
+
+      properties: {
+        question: {
+          type: String ,
+          value: 'question-element',
+        },
+        answer1:{
+          type: String,
+          value: 'answer1'
+        },
+        answer2:{
+          type: String, 
+          value: 'answer2'
+        }, 
+        answer3:{
+          type: String, 
+          value: 'answer3'
+        },
+        answer4:{
+          type: String,
+          value: 'answer4'
+        }
+      },
+
+    });
+  </script>
+</dom-module>
